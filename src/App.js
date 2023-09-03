@@ -3,9 +3,9 @@ import "./App.css";
 import "./css/test.css";
 import axios from "axios";
 
-// https://api.themoviedb.org/3/search/movie?api_key=14a117ba5adb4431bd4fec8362448964&language=en-US&query=The%20Amazing%20Spider-Man
+// https://api.themoviedb.org/3/search/movie?api_key={Your API KEY}&language=en-US&query=The%20Amazing%20Spider-Man
 
-//api.themoviedb.org/3/trending/movie/day?language=en-US&api_key=14a117ba5adb4431bd4fec8362448964&
+//api.themoviedb.org/3/trending/movie/day?language=en-US&api_key={Your API KEY}&
 // https:
 function App() {
   const [movies, setMovies] = useState([]);
@@ -14,7 +14,7 @@ function App() {
     setLoading(true);
     axios
       .get(
-        "https://api.themoviedb.org/3/trending/movie/day?language=en-US&api_key=14a117ba5adb4431bd4fec8362448964&"
+        "https://api.themoviedb.org/3/trending/movie/day?language=en-US&api_key={Your API KEY}&"
       )
       .then((result) => {
         setLoading(false);
